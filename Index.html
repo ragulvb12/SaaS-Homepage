@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Igloo Resort</title>
-  <meta name="viewport" content="width=device-width, initial-scale=2.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
   <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -14,32 +17,44 @@
 
 <body>
 
-  <!-- Navigation -->
-  <nav class="fixed top-4 left-0 right-0 z-30 px-6 md:px-12">
-    <div class="max-w-6xl mx-auto bg-black/40 backdrop-blur rounded-md flex items-center justify-between px-4 py-2">
-      <a href="#home" class="text-lg font-serif resort-gradient-text">Igloo Resort</a>
+<!-- Navigation -->
+<nav class="fixed top-4 left-0 right-0 z-30 px-6 md:px-12">
+  <div class="max-w-6xl mx-auto bg-black/40 backdrop-blur rounded-md flex items-center justify-between px-4 py-2">
 
-      <div class="hidden md:flex items-center gap-6">
-        <a href="#home" class="text-sm text-gray-200 hover:text-white">Home</a>
-        <a href="#resort" class="text-sm text-gray-200 hover:text-white">Resort</a>
-        <a href="login.html" class="ext-sm text-gray-200 hover:text-white">Login</a>
-      </div>
+    <a href="#home" class="text-lg font-serif resort-gradient-text">
+      Igloo Resort
+    </a>
 
-      <div class="md:hidden">
-        <button id="mobile-menu-btn" class="text-gray-200">Menu</button>
-      </div>
+    <div class="hidden md:flex items-center gap-6">
+      <a href="#home" class="text-sm text-gray-200 hover:text-white">Home</a>
+      <a href="#resort" class="text-sm text-gray-200 hover:text-white">Resort</a>
+      <a href="login.html" class="text-sm text-gray-200 hover:text-white">Login</a>
     </div>
-  </nav>
 
-  <!-- Hero Section -->
-  <section id="home" class="relative min-h-screen flex items-center justify-center">
+    <div class="md:hidden">
+      <button id="mobile-menu-btn" class="text-gray-200">Menu</button>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden md:hidden max-w-6xl mx-auto mt-2 px-4">
+    <div class="bg-black/40 backdrop-blur rounded-md px-4 py-3 flex flex-col gap-2">
+      <a href="#home" class="text-sm text-gray-200 hover:text-white">Home</a>
+      <a href="#resort" class="text-sm text-gray-200 hover:text-white">Resort</a>
+      <a href="login.html" class="text-sm text-gray-200 hover:text-white">Login</a>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section id="home" class="relative min-h-screen flex items-center justify-center pt-20">
 
   <!-- Background Image -->
   <img
-    src="/pexels-pixabay-258154.jpg"
+    src="pexels-pixabay-258154.jpg"
     class="absolute inset-0 w-full h-full object-cover"
     alt="Igloo Background"
-  >
+  />
 
   <!-- Overlay -->
   <div class="absolute inset-0 bg-black/60"></div>
@@ -70,7 +85,6 @@
     </div>
 
   </div>
-
 </section>
 
 <!-- Rooms Section -->
@@ -78,25 +92,36 @@
   <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
 
     <div class="resort-card p-8 rounded-xl">
-      <img src="/pexels-asadphoto-3155639.jpg" alt="Igloo Suite" class="w-full h-48 object-cover rounded-md mb-4">
+      <img src="pexels-asadphoto-3155639.jpg" class="w-full h-48 object-cover rounded-md mb-4" alt="Luxury Suite">
       <h3 class="text-xl font-semibold mb-2">Luxury Suite</h3>
       <p class="text-gray-400 text-sm">Ocean view with private balcony</p>
     </div>
 
     <div class="resort-card p-8 rounded-xl">
-      <img src="/download.jpeg" alt="Igloo Spa" class="w-full h-48 object-cover rounded-md mb-4">
+      <img src="download.jpeg" class="w-full h-48 object-cover rounded-md mb-4" alt="Wellness Spa">
       <h3 class="text-xl font-semibold mb-2">Wellness Spa</h3>
       <p class="text-gray-400 text-sm">Relax, renew, rejuvenate</p>
     </div>
 
     <div class="resort-card p-8 rounded-xl">
-      <img src="images.jpeg" alt="Igloo Spa" class="w-full h-48 object-cover rounded-md mb-4">
+      <img src="images.jpeg" class="w-full h-48 object-cover rounded-md mb-4" alt="Fine Dining">
       <h3 class="text-xl font-semibold mb-2">Fine Dining</h3>
       <p class="text-gray-400 text-sm">World-class cuisine experience</p>
     </div>
 
   </div>
 </section>
+
+<!-- Mobile Menu Script -->
+<script>
+  const btn = document.getElementById('mobile-menu-btn');
+  const menu = document.getElementById('mobile-menu');
+
+  btn.addEventListener('click', () => {
+    menu.classList.toggle('hidden');
+    btn.textContent = menu.classList.contains('hidden') ? 'Menu' : 'Close';
+  });
+</script>
 
 </body>
 </html>

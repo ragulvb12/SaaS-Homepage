@@ -1,61 +1,61 @@
 /* Base Theme */
 body {
-    background-color: #060807;
-    color: #f1f1ee;
-    font-family: 'Poppins', serif;
+  background-color: #060807;
+  color: #f1f1ee;
+  font-family: 'Poppins', sans-serif;
 }
 
 /* Resort Gradient Text */
 .resort-gradient-text {
-    background: linear-gradient(
-        90deg,
-        #c9a24d 0%,     /* Sand Gold */
-        #2f6f8f 50%,    /* Ocean Blue */
-        #1f5f4a 100%    /* Palm Green */
-    );
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+  background: linear-gradient(
+    90deg,
+    #c9a24d,
+    #2f6f8f,
+    #1f5f4a
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 /* Left Stripe Accent */
 .resort-stripe-left {
-    border-left: 4px solid transparent;
-    padding-left: 1.5rem;
-    border-image: linear-gradient(
-        to bottom,
-        #c9a24d,
-        #2f6f8f,
-        #1f5f4a
-    ) 1;
+  border-left: 4px solid transparent;
+  padding-left: 1.5rem;
+  border-image: linear-gradient(
+    to bottom,
+    #c9a24d,
+    #2f6f8f,
+    #1f5f4a
+  ) 1;
 }
 
 /* Glass Button */
 .resort-glass-btn {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    color: #ffffff;
-    transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  transition: all 0.3s ease;
 }
 
 .resort-glass-btn:hover {
-    background: rgba(255, 255, 255, 0.2);
-    transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
 }
 
 /* Resort Cards */
 .resort-card {
-    background: linear-gradient(
-        180deg,
-        rgba(255, 255, 255, 0.05),
-        rgba(0, 0, 0, 0.6)
-    );
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    transition: all 0.4s ease;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.05),
+    rgba(0, 0, 0, 0.6)
+  );
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.4s ease;
 }
 
 .resort-card:hover {
-    border-color: #c9a24d;
-    transform: translateY(-6px);
+  border-color: #c9a24d;
+  transform: translateY(-6px);
 }
