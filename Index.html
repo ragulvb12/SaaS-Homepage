@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Igloo Resort</title>
+  <meta name="viewport" content="width=device-width, initial-scale=2.0">
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="fixed top-4 left-0 right-0 z-30 px-6 md:px-12">
+    <div class="max-w-6xl mx-auto bg-black/40 backdrop-blur rounded-md flex items-center justify-between px-4 py-2">
+      <a href="#home" class="text-lg font-serif resort-gradient-text">Igloo Resort</a>
+
+      <div class="hidden md:flex items-center gap-6">
+        <a href="#home" class="text-sm text-gray-200 hover:text-white">Home</a>
+        <a href="#resort" class="text-sm text-gray-200 hover:text-white">Resort</a>
+        <a href="login.html" class="ext-sm text-gray-200 hover:text-white">Login</a>
+      </div>
+
+      <div class="md:hidden">
+        <button id="mobile-menu-btn" class="text-gray-200">Menu</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="relative min-h-screen flex items-center justify-center">
+
+  <!-- Background Image -->
+  <img
+    src="/pexels-pixabay-258154.jpg"
+    class="absolute inset-0 w-full h-full object-cover"
+    alt="Igloo Background"
+  >
+
+  <!-- Overlay -->
+  <div class="absolute inset-0 bg-black/60"></div>
+
+  <!-- Content -->
+  <div class="relative z-10 max-w-3xl text-center px-6 resort-stripe-left">
+
+    <p class="uppercase tracking-widest text-sm text-gray-300 mb-4">
+      Hotel & Spa
+    </p>
+
+    <h1 class="text-5xl md:text-6xl font-serif mb-6 resort-gradient-text">
+      Igloo Resort
+    </h1>
+
+    <p class="text-gray-300 mb-10">
+      Your favourite place. Our family story.
+    </p>
+
+    <div class="flex justify-center gap-4">
+      <button class="resort-glass-btn px-6 py-3 rounded-full text-sm">
+        Book Now
+      </button>
+
+      <button class="resort-glass-btn px-6 py-3 rounded-full text-sm">
+        Explore
+      </button>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- Rooms Section -->
+<section id="resort" class="py-20 bg-black">
+  <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
+
+    <div class="resort-card p-8 rounded-xl">
+      <img src="/pexels-asadphoto-3155639.jpg" alt="Igloo Suite" class="w-full h-48 object-cover rounded-md mb-4">
+      <h3 class="text-xl font-semibold mb-2">Luxury Suite</h3>
+      <p class="text-gray-400 text-sm">Ocean view with private balcony</p>
+    </div>
+
+    <div class="resort-card p-8 rounded-xl">
+      <img src="/download.jpeg" alt="Igloo Spa" class="w-full h-48 object-cover rounded-md mb-4">
+      <h3 class="text-xl font-semibold mb-2">Wellness Spa</h3>
+      <p class="text-gray-400 text-sm">Relax, renew, rejuvenate</p>
+    </div>
+
+    <div class="resort-card p-8 rounded-xl">
+      <img src="images.jpeg" alt="Igloo Spa" class="w-full h-48 object-cover rounded-md mb-4">
+      <h3 class="text-xl font-semibold mb-2">Fine Dining</h3>
+      <p class="text-gray-400 text-sm">World-class cuisine experience</p>
+    </div>
+
+  </div>
+</section>
+
+</body>
+</html>
